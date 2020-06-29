@@ -54,7 +54,6 @@ func Init(tag ...string) bool {
 
 	// Read user config file, if we can
 	//if homedir, err := os.UserHomeDir(); err == nil {
-
 	//	_ = ReadConfig(filepath.Join(homedir, DefaultUserConfig), configTag)
 	//}
 

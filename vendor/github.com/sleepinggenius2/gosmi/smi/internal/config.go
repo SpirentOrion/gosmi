@@ -33,7 +33,7 @@ func expandPath(path string) (string, error) {
 	if path == "" {
 		return "", errors.New("Path is empty")
 	}
-        // os.UserHomeDir() is not available till go1.12
+	// os.UserHomeDir() is not available till go1.12
 	//if path[0] == '~' {
 	//	homedir, err := os.UserHomeDir()
 	//	if err != nil {
