@@ -8,6 +8,18 @@ import (
 	"github.com/SpirentOrion/gosmi/types"
 )
 
+func LoadModuleFromStream(module string, data []byte) string {
+	checkInit()
+	modulePtr, err := internal.GetModuleFromStream(module, data)
+	if err != nil {
+		fmt.Println(err)
+	}
+	if modulePtr == nil {
+		return ""
+	}
+	return modulePtr.Name.String()
+}
+
 // char *smiLoadModule(const char *module)
 func LoadModule(module string) string {
 	checkInit()
