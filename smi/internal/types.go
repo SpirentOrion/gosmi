@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/SpirentOrion/gosmi/types"
 )
 
 type List struct {

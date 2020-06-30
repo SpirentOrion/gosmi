@@ -8,8 +8,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/sleepinggenius2/gosmi/smi/internal"
-	"github.com/sleepinggenius2/gosmi/types"
+	"github.com/SpirentOrion/gosmi/smi/internal"
+	"github.com/SpirentOrion/gosmi/types"
 )
 
 const (

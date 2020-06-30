@@ -3,6 +3,42 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "0CiP4hEP5n1gnGfqaCIuQfVKP/0=",
+			"path": "github.com/SpirentOrion/gosmi",
+			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
+			"revisionTime": "2020-06-19T15:09:59Z"
+		},
+		{
+			"checksumSHA1": "01FGJ6JGtJ1yi2swaF/dOdum2LU=",
+			"path": "github.com/SpirentOrion/gosmi/models",
+			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
+			"revisionTime": "2020-06-19T15:09:59Z"
+		},
+		{
+			"checksumSHA1": "gGYD40N/QTih/5bL6BM+5ggndL0=",
+			"path": "github.com/SpirentOrion/gosmi/parser",
+			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
+			"revisionTime": "2020-06-19T15:09:59Z"
+		},
+		{
+			"checksumSHA1": "jiEZmZOlv4/Tfc4l0B1HJZll/EA=",
+			"path": "github.com/SpirentOrion/gosmi/smi",
+			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
+			"revisionTime": "2020-06-19T15:09:59Z"
+		},
+		{
+			"checksumSHA1": "S7kuQa65LrCjtVxh9ZqHaGjM6aY=",
+			"path": "github.com/SpirentOrion/gosmi/smi/internal",
+			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
+			"revisionTime": "2020-06-19T15:09:59Z"
+		},
+		{
+			"checksumSHA1": "1yF+9YvcHmEAZL2YNuvYD6hnmn0=",
+			"path": "github.com/SpirentOrion/gosmi/types",
+			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
+			"revisionTime": "2020-06-19T15:09:59Z"
+		},
+		{
 			"checksumSHA1": "G62+nrG5waTws4AqHGa5G3XPNOY=",
 			"path": "github.com/alecthomas/participle",
 			"revision": "5c87ce9739e428b47ab4dbf7dbbf3457eccd4f29",
@@ -37,42 +73,6 @@
 			"path": "github.com/pkg/errors",
 			"revision": "614d223910a179a466c1767a985424175c39b465",
 			"revisionTime": "2020-01-14T19:47:44Z"
-		},
-		{
-			"checksumSHA1": "0CiP4hEP5n1gnGfqaCIuQfVKP/0=",
-			"path": "github.com/sleepinggenius2/gosmi",
-			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
-			"revisionTime": "2020-06-19T15:09:59Z"
-		},
-		{
-			"checksumSHA1": "01FGJ6JGtJ1yi2swaF/dOdum2LU=",
-			"path": "github.com/sleepinggenius2/gosmi/models",
-			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
-			"revisionTime": "2020-06-19T15:09:59Z"
-		},
-		{
-			"checksumSHA1": "gGYD40N/QTih/5bL6BM+5ggndL0=",
-			"path": "github.com/sleepinggenius2/gosmi/parser",
-			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
-			"revisionTime": "2020-06-19T15:09:59Z"
-		},
-		{
-			"checksumSHA1": "jiEZmZOlv4/Tfc4l0B1HJZll/EA=",
-			"path": "github.com/sleepinggenius2/gosmi/smi",
-			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
-			"revisionTime": "2020-06-19T15:09:59Z"
-		},
-		{
-			"checksumSHA1": "S7kuQa65LrCjtVxh9ZqHaGjM6aY=",
-			"path": "github.com/sleepinggenius2/gosmi/smi/internal",
-			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
-			"revisionTime": "2020-06-19T15:09:59Z"
-		},
-		{
-			"checksumSHA1": "1yF+9YvcHmEAZL2YNuvYD6hnmn0=",
-			"path": "github.com/sleepinggenius2/gosmi/types",
-			"revision": "5a282bd9212b9c5ea24992b687f5eaf35a644b34",
-			"revisionTime": "2020-06-19T15:09:59Z"
 		}
 	],
 	"rootPath": "github.com/SpirentOrion/gosmi"
