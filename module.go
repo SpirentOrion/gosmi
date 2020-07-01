@@ -92,6 +92,14 @@ func CreateModule(smiModule *types.SmiModule) (module SmiModule) {
 	}
 }
 
+func LoadModuleFromStream(modulePath string, data []byte) (string, error) {
+	moduleName := smi.LoadModuleFromStream(modulePath, data)
+	if moduleName == "" {
+		return "", fmt.Errorf("Could not load module at %s", modulePath)
+	}
+	return moduleName, nil
+}
+
 func LoadModule(modulePath string) (string, error) {
 	moduleName := smi.LoadModule(modulePath)
 	if moduleName == "" {
