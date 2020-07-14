@@ -2,15 +2,16 @@ package smi
 
 import (
 	"fmt"
+	"io"
 	"unsafe"
 
 	"github.com/sleepinggenius2/gosmi/smi/internal"
 	"github.com/sleepinggenius2/gosmi/types"
 )
 
-func LoadModuleFromStream(module string, data []byte) string {
+func LoadModuleFromReader(module string, r io.Reader) string {
 	checkInit()
-	modulePtr, err := internal.GetModuleFromStream(module, data)
+	modulePtr, err := internal.GetModuleFromReader(module, r)
 	if err != nil {
 		fmt.Println(err)
 	}

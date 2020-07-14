@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"bytes"
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
@@ -305,12 +305,12 @@ func GetModulePath(name string) (string, error) {
 	return "", os.ErrNotExist
 }
 
-func GetModuleFromStream(name string, data []byte) (*Module, error) {
+func GetModuleFromReader(name string, r io.Reader) (*Module, error) {
 	module := FindModuleByName(name)
 	if module != nil {
 		return module, nil
 	}
-	return LoadModuleFromStream(data)
+	return LoadModuleFromReader(r)
 }
 
 func GetModule(name string) (*Module, error) {
@@ -321,8 +321,7 @@ func GetModule(name string) (*Module, error) {
 	return LoadModule(name)
 }
 
-func LoadModuleFromStream(data []byte) (*Module, error) {
-	r := bytes.NewReader(data)
+func LoadModuleFromReader(r io.Reader) (*Module, error) {
 	in, err := parser.Parse(r)
 	if err != nil {
 		return nil, errors.Wrap(err, "Parse module")

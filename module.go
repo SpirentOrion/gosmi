@@ -2,6 +2,7 @@ package gosmi
 
 import (
 	"fmt"
+	"io"
 
 	"github.com/sleepinggenius2/gosmi/models"
 	"github.com/sleepinggenius2/gosmi/smi"
@@ -92,8 +93,8 @@ func CreateModule(smiModule *types.SmiModule) (module SmiModule) {
 	}
 }
 
-func LoadModuleFromStream(modulePath string, data []byte) (string, error) {
-	moduleName := smi.LoadModuleFromStream(modulePath, data)
+func LoadModuleFromReader(modulePath string, r io.Reader) (string, error) {
+	moduleName := smi.LoadModuleFromReader(modulePath, r)
 	if moduleName == "" {
 		return "", fmt.Errorf("Could not load module at %s", modulePath)
 	}
