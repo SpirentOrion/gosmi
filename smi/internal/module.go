@@ -305,14 +305,6 @@ func GetModulePath(name string) (string, error) {
 	return "", os.ErrNotExist
 }
 
-func GetModuleFromReader(name string, r io.Reader) (*Module, error) {
-	module := FindModuleByName(name)
-	if module != nil {
-		return module, nil
-	}
-	return LoadModuleFromReader(r)
-}
-
 func GetModule(name string) (*Module, error) {
 	module := FindModuleByName(name)
 	if module != nil {

@@ -9,9 +9,9 @@ import (
 	"github.com/sleepinggenius2/gosmi/types"
 )
 
-func LoadModuleFromReader(module string, r io.Reader) string {
+func LoadModuleFromReader(r io.Reader) string {
 	checkInit()
-	modulePtr, err := internal.GetModuleFromReader(module, r)
+	modulePtr, err := internal.LoadModuleFromReader(r)
 	if err != nil {
 		fmt.Println(err)
 	}

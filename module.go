@@ -1,6 +1,7 @@
 package gosmi
 
 import (
+	"errors"
 	"fmt"
 	"io"
 
@@ -93,12 +94,12 @@ func CreateModule(smiModule *types.SmiModule) (module SmiModule) {
 	}
 }
 
-func LoadModuleFromReader(modulePath string, r io.Reader) (string, error) {
-	moduleName := smi.LoadModuleFromReader(modulePath, r)
+func LoadModuleFromReader(r io.Reader) error {
+	moduleName := smi.LoadModuleFromReader(r)
 	if moduleName == "" {
-		return "", fmt.Errorf("Could not load module at %s", modulePath)
+		return errors.New("Fail to load module from binary data")
 	}
-	return moduleName, nil
+	return nil
 }
 
 func LoadModule(modulePath string) (string, error) {
