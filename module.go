@@ -1,7 +1,9 @@
 package gosmi
 
 import (
+	"errors"
 	"fmt"
+	"io"
 
 	"github.com/sleepinggenius2/gosmi/models"
 	"github.com/sleepinggenius2/gosmi/smi"
@@ -90,6 +92,14 @@ func CreateModule(smiModule *types.SmiModule) (module SmiModule) {
 		},
 		smiModule: smiModule,
 	}
+}
+
+func LoadModuleFromReader(r io.Reader) error {
+	moduleName := smi.LoadModuleFromReader(r)
+	if moduleName == "" {
+		return errors.New("Fail to load module from binary data")
+	}
+	return nil
 }
 
 func LoadModule(modulePath string) (string, error) {

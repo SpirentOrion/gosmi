@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
@@ -310,6 +311,18 @@ func GetModule(name string) (*Module, error) {
 		return module, nil
 	}
 	return LoadModule(name)
+}
+
+func LoadModuleFromReader(r io.Reader) (*Module, error) {
+	in, err := parser.Parse(r)
+	if err != nil {
+		return nil, errors.Wrap(err, "Parse module")
+	}
+	out, err := BuildModule("", in)
+	if err != nil {
+		return nil, errors.Wrap(err, "Build module")
+	}
+	return out, nil
 }
 
 func LoadModule(name string) (*Module, error) {

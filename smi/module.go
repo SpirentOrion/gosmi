@@ -2,11 +2,24 @@ package smi
 
 import (
 	"fmt"
+	"io"
 	"unsafe"
 
 	"github.com/sleepinggenius2/gosmi/smi/internal"
 	"github.com/sleepinggenius2/gosmi/types"
 )
+
+func LoadModuleFromReader(r io.Reader) string {
+	checkInit()
+	modulePtr, err := internal.LoadModuleFromReader(r)
+	if err != nil {
+		fmt.Println(err)
+	}
+	if modulePtr == nil {
+		return ""
+	}
+	return modulePtr.Name.String()
+}
 
 // char *smiLoadModule(const char *module)
 func LoadModule(module string) string {
